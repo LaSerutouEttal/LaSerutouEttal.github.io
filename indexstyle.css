@@ -1,0 +1,42 @@
+p {
+	margin-left: 200px;
+	margin-right: 200px;
+	color: #bbbbbb;
+}
+
+h2 {
+	margin-left: 130px;
+	margin-right: 130px;
+	color: white;
+}
+
+h1 {
+	margin-left: 130px;
+	margin-right: 130px;
+	color: white;
+}
+
+a {
+	color: teal;
+}
+
+body {
+	background-color: black;
+	
+}
+
+img {
+	height: 250px;
+	width: 250px;
+}
+
+table {
+	margin-left: 130px;
+	margin-right: 130px;
+	color: #bbbbbb;
+	text-align: center;
+}
+
+td {
+	font-weight: bold;
+}
