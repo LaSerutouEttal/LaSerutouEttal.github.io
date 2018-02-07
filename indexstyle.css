@@ -45,14 +45,14 @@ td {
 }
 
 ul {
-	margin-left: 4cm;
-	margin-right: 4cm;
+	margin-left: 1cm;
+	margin-right: 1cm;
 	color: #bbbbbb;
 }
 
 ol {
-	margin-left: 4cm;
-	margin-right: 4cm;
+	margin-left: 1cm;
+	margin-right: 1cm;
 	color: #bbbbbb;
 }
 
@@ -60,4 +60,8 @@ h3 {
 	/*margin-left: 12cm;
 	margin-right: 12cm;*/
 	color: white;
+}
+
+center {
+	color: #bbbbbb
 }
