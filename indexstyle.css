@@ -1,20 +1,23 @@
 p {
-	/*margin-left: 200px;
-	margin-right: 200px;*/
-	/*margin-left: 12cm;
-	margin-right: 12cm;*/
 	color: #bbbbbb;
 }
 
-h2 {
-	/*margin-left: 12cm;
-	margin-right: 12cm;*/
+@font-face {
+	font-family: "Final Fantasy";
+	src: url("./fonts/finalf.ttf");
+}
+
+title {
 	color: white;
+	font-family: "Helvetica", sans-serif;
+}
+
+h2 {
+	color: white;
+	font-family: "Helvetica", sans-serif;
 }
 
 h1 {
-	/*margin-left: 12cm;
-	margin-right: 12cm;*/
 	color: white;
 }
 
@@ -24,18 +27,17 @@ a {
 
 body {
 	background-color: black;
+	width: 700px;
+	margin: 0 auto;
 }
 
 img {
-
 	height: 600px;
-	/*height: 250px;
-	width: 250px;*/
 }
 
 table {
-	margin-left: 130px;
-	margin-right: 130px;
+	margin-left: 20%;
+	margin-right: 20%;
 	color: #bbbbbb;
 	text-align: center;
 }
@@ -45,23 +47,22 @@ td {
 }
 
 ul {
-	margin-left: 1cm;
-	margin-right: 1cm;
 	color: #bbbbbb;
 }
 
 ol {
-	margin-left: 1cm;
-	margin-right: 1cm;
 	color: #bbbbbb;
 }
 
 h3 {
-	/*margin-left: 12cm;
-	margin-right: 12cm;*/
 	color: white;
+	font-family: "Helvetica", sans-serif;
 }
 
 center {
 	color: #bbbbbb
+}
+
+strong {
+	color: white;
 }
