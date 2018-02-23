@@ -12,13 +12,20 @@ title {
 	font-family: "Helvetica", sans-serif;
 }
 
+head {
+	color: white;
+	text-align: center;
+}
+
 h2 {
 	color: white;
 	font-family: "Helvetica", sans-serif;
 }
 
 h1 {
+	text-align: center;
 	color: white;
+	font-family: "Helvetica", sans-serif;
 }
 
 a {
