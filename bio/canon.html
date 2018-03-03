@@ -1,22 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" rel="stylesheet" href="../indexstyle.css"/>
+    <link type="text/css" rel="stylesheet" href="./biostyle.css"/>
     <title>Canon</title>
 </head>
 <body>
     <h1>canon</h1>
-    <p>a list of the most important works I've consumed, that have forever left their mark on me.</p>
+    <p>A list of the most important works I've consumed, that have forever left their mark on me.</p>
+    <p>Ordered chronologically.</p>
+    <p>Albums separated by genre.</p>
+    <p>Click on list entries to view explanation.</p>
     <h2>video games</h2>
     <ul>
-        <li>Xenogears (1998, PS1)</li>
-        <li>Half-Life (1998, PC)</li>
-        <li>Final Fantasy X (2001, PS2)</li>
-        <li>Metal Gear Solid 2 (2001, PS2)</li>
-        <li>The Legend of Heroes: Trails in the Sky (2004, PC)</li>
-        <li>Final Fantasy XII (2006, PS2)</li>
-        <li>BioShock Infinite (2013, PC)</li>
-        <li>Overwatch (2016, PC)</li>
+        <li class="expand">Xenogears (1998, PS1)</li>
+        <div class="panel">
+            <p>Xenogears and Xenosaga are artistic high points in the video game medium. This game is known
+            for helping define the renaissance that Japanese RPGs enjoyed in the late 90s. Unlike many games before
+            or since, it combined many religious and psychological theories to create an extremely compelling narrative.
+            </p>
+        </div>
+        <li class="expand">Half-Life (1998, PC)</li>
+        <div class="panel">
+            <p>
+                Half-Life defined my childhood. More importantly, it completely defined and revolutionized the first-
+                person-shooter genre and spawned a vibrant modding community.
+                With a robust engine, expansive, expressive and meaningful level design, it's no
+                stretch to say that first person shooter games are still learning lessons it put forth all the way back
+                in 1998.
+            </p>
+        </div>
+
+        <li class="expand">Final Fantasy X (2001, PS2)</li>
+        <div class="panel">
+            <p>
+                Final Fantasy X was my first ever JRPG. That alone guarantees I can never be objective about judging it,
+                however I think its popularity is well deserved. In my opinion it is the quintessential Final Fantasy -
+                great worldbuilding, beautiful characters, gorgeous soundtrack. For those who played Final Fantasy X
+                at an impressionable age, Spira stays with them for a long time. "People die, and Yuna dances."
+            </p>
+        </div>
+        <li class="expand">Metal Gear Solid 2 (2001, PS2)</li>
+        <div class="panel">
+            <p>
+                I have a tattoo of the Big Shell on my left arm. Big whoop, right? I have many criticisms of this game
+                and its creator, but that does not do anything to deny the massive impact it has had on me. It is the
+                perfect post-modern mind explosion to immediately follow its prequel, Metal Gear Solid. Its predictions
+                about the digital age continue to be relevant even at the time of writing this (2018).
+            </p>
+        </div>
+        <li class="expand">The Legend of Heroes: Trails in the Sky (2004, PC)</li>
+        <div class="panel">
+            <p>
+                Whenever I get burnt out on video games as a whole, I play a Trails game. Trails in the Sky is such a
+                beautiful meditation on the JRPG genre. Released shortly after the late 90s RPG "renaissance", Falcom
+                distilled the best qualities of said RPGs into one charming, streamlined, heat-wrenching experience. The
+                localizations done in recent years by XSEED are nothing short of masterful. I recommend this game to people
+                with an interest in "old school JRPGs" on a regular basis.
+            </p>
+        </div>
+        <li class="expand">Final Fantasy XII (2006, PS2)</li>
+        <div class="panel">
+            <p>
+                If Final Fantasy X was my introduction to JRPGs, Final Fantasy XII brought it to a completely new level.
+                It's difficult for me to describe how gorgeous this game is on every possible level. The environments are
+                enrapturing. The characters almost take a backseat to them, but enjoy the same great writing and localization
+                that is afforded for the game's worldbuilding and backstory. Sakimoto's soundtrack and Matsuno's scenario
+                is exquisite. Everything is seemingly ornate and looked over several times. The whole game carries with it
+                a strong sense of grandiose "high adventure" that I struggle to describe to others.
+            </p>
+        </div>
+        <li class="expand">BioShock Infinite (2013, PC)</li>
+        <div class="panel">
+            <p>
+                Bioshock Infinite was perhaps the first game I was ever obsessed with where I was aware of said obsession.
+                After finishing the base game, but before the DLC came out, I filled a notebook page with my theory of
+                Infinite's "timelines" in order to make sense of the tragic beauty of a game I had just played. Where
+                Half-Life redefined the first person shooter, Bioshock Infinite re-defined it in an adventurous, narrative-
+                focused way that didn't forget about the basic mechanics that made the genre so utterly satisfying.
+            </p>
+        </div>
+        <li class="expand">Overwatch (2016, PC)</li>
+        <div class="panel">
+            <p>
+                Overwatch is the first online game I have regularly stuck with since release, pouring well over a hundred
+                hours into it as of early 2018. An estranged college friend introduced me to it by showing me its first
+                cinematic trailer before it had been released. I was expecting something unexciting, but the trailer had
+                me invigorated in the online FPS once again. At first exposure, I was quite interested by Widowmaker,
+                Genji, and D.Va. This game is somewhat of a masterclass in character and UI design, as well as how to
+                keep things fresh after a long, long time playing.
+            </p>
+        </div>
     </ul>
 
     <h2>movies</h2>
@@ -78,22 +151,30 @@
         <li>In Her Own Words - Unfamiliar (2016)</li>
     </ul>
 
-    <!--
-    <script type="text/javascript" charset="utf-8">
-        function showHide(elementid){
-            if (document.getElementById(elementid).style.display === 'none'){
-                document.getElementById(elementid).style.display = '';
-            } else {
-                document.getElementById(elementid).style.display = 'none';
+    <script>
+    var acc = document.getElementsByClassName("expand");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
             }
-        }
+            else {
+                panel.style.display = "block";
+            }
+        });
+    }
     </script>
 
-    <div><a href="javascript:showHide('div_1035677');">more...</a></div>
-    <div id="div_1035677" style="display:none">
-        HIDDEN CONTENT
-    </div>
-    -->
+
+    <h2><a href="../index.html">home</a></h2>
 
 </body>
 </html>
